@@ -1,0 +1,156 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(240, 227, 215);
+}
+
+#pagina-atividades {
+  background: rgb(226,225,202);
+  background: linear-gradient(rgba(240,227,215,1) 75%, rgba(142,141,130,1) 85%, rgba(68,68,68,1) 95%);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgb(68, 68, 68);
+  height: auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 120px;
+}
+
+nav li {
+  display: inline;
+  font-size: 18px
+}
+
+nav a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: #bbb;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: white;
+  font-size: 19px!important;
+  transition: all 0.5s;
+}
+
+nav a.active {
+  text-decoration: underline;
+  color: white;
+}
+
+nav a.active:hover {
+  font-size: 18px!important;
+}
+
+#carousel {
+  height: 300px
+}
+
+#carousel img{
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+main {
+  background: #f0e3d7;
+  padding: 10%;
+}
+
+main section {
+  margin: 0 auto;
+  width: 80%;
+}
+
+main h2,
+main h3 {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+main h3 {
+  font-size: 24px;
+}
+
+hr {
+  margin: 5px auto 40px;
+  width: 30%;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 255, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(255, 0, 255, 0)
+    );
+}
+
+.atividades {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.atividades div img {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.atividades div img:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.saiba-mais {
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 30px;
+  font-size: 18px;
+  border-radius: 7px;
+  background-color: blue;
+  border: solid 2px white;
+  width: 150px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.saiba-mais:hover {
+  color: blue;
+  background: white;
+  border: solid 2px blue;
+  transition: all 0.5s;
+}
+
+footer {
+  height: 120px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+footer.no_gradient {
+  background: #444;
+}
+
+footer address {
+  color: white;
+}
