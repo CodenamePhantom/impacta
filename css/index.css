@@ -1,16 +1,17 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 img {
   max-width: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background: rgb(240, 227, 215);
-}
-
-#pagina-atividades {
-  background: rgb(226,225,202);
-  background: linear-gradient(rgba(240,227,215,1) 75%, rgba(142,141,130,1) 85%, rgba(68,68,68,1) 95%);
 }
 
 header {
@@ -22,6 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 header img {
@@ -43,7 +45,7 @@ nav a {
 
 nav a:hover {
   color: white;
-  font-size: 19px!important;
+  font-size: 19px !important;
   transition: all 0.5s;
 }
 
@@ -53,14 +55,14 @@ nav a.active {
 }
 
 nav a.active:hover {
-  font-size: 18px!important;
+  font-size: 18px !important;
 }
 
 #carousel {
   height: 300px
 }
 
-#carousel img{
+#carousel img {
   max-height: 100%;
   width: 100%;
   object-fit: cover;
@@ -81,6 +83,7 @@ main h2,
 main h3 {
   color: #333;
   text-transform: uppercase;
+  text-align: center;
   font-size: 30px;
   margin: 20px 0;
 }
@@ -94,12 +97,18 @@ hr {
   width: 30%;
   border: 0;
   height: 2px;
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(255, 0, 255, 0),
       rgba(0, 0, 0, 0.75),
-      rgba(255, 0, 255, 0)
-    );
+      rgba(255, 0, 255, 0));
+}
+
+.atividades-container {
+  background: #444;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 60px 0;
 }
 
 .atividades {
@@ -108,14 +117,27 @@ hr {
   gap: 50px;
 }
 
-.atividades div img {
+.atividades div img,
+.atividades article img {
   width: 100%;
   transition: all 0.3s;
 }
 
-.atividades div img:hover {
+.atividades article {
+  width: 30%;
+}
+
+.atividades div img:hover,
+.atividades article img:hover {
   transform: scale(1.05);
   transition: all 0.3s;
+}
+
+.center {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .saiba-mais {
@@ -140,17 +162,125 @@ hr {
   transition: all 0.5s;
 }
 
-footer {
-  height: 120px;
-  padding: 0 50px;
-  display: flex;
-  align-items: center;
+.empresa i {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
-footer.no_gradient {
+.empresa {
+  display: flex;
+  justify-content: space-between;
+  padding: 250px 10% 100px;
+  background-image: url(../images/crossfit1.jpg);
+  background-size: 110%;
+}
+
+.empresa article {
+  background: #ef7a2e;
+  border-radius: 10px;
+  border: solid #ccc 1px;
+  text-align: center;
+  margin: 0 10px;
+  padding: 30px 15px
+}
+
+.empresa p {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.motivacao {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.motivacao div {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.motivacao aside {
+  width: 50%;
+  padding: 0 5%;
+}
+
+.motivacao div img {
+  width: 60%;
+  object-fit: cover;
+}
+
+.motivacao h3 {
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.motivacao p {
+  line-height: 22px;
+}
+
+.vantagem {
+  width: auto;
+}
+
+footer {
   background: #444;
+  color: #ccc;
 }
 
 footer address {
-  color: white;
+  line-height: 20px;
+  padding: 50px 10% 20px;
+}
+
+footer p {
+  margin: 0;
+  margin-top: 15px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* atividades.html */
+.faca-parte {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  padding: 5% 5% 0;
+}
+
+.faca-parte aside,
+.faca-parte div {
+  width: 50%;
+}
+
+.faca-parte-cta {
+  background: white;
+  border-radius: 7px;
+  border: #ccc;
+  padding: 2%;
+}
+
+.faca-parte-cta h3 {
+  font: 24px;
+  word-wrap: break-word;
+}
+
+.filiacao {
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(to bottom,
+      rgb(240, 227, 215),
+      #444);
+}
+
+.filiacao article {
+  width: 30%;
+}
+
+.redes-sociais img {
+  width: 10%;
+  margin-top: 10px;
+  cursor: pointer;
 }
