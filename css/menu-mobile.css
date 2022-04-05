@@ -1,0 +1,38 @@
+input#control-nav {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (max-width: 599px) {
+  header .control-nav {
+    position: absolute;
+    right: 20px;
+    top: 40;
+    display: block;
+    width: 30px;
+    padding: 5px 0;
+    border: solid #fff;
+    border-width: 3px 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  header .control-nav:before {
+    background: #fff;
+    display: block;
+    height: 2px;
+    content: '';
+  }
+
+  header.control-nav-close {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    transform: translate(100%, 0);
+  }
+}
