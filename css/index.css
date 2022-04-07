@@ -246,6 +246,10 @@ footer p {
   padding-bottom: 40px;
 }
 
+#clock {
+  padding-top: 5%;
+}
+
 /* atividades.html */
 
 .faca-parte {
@@ -323,7 +327,7 @@ footer p {
     background-image: none;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 70%;
     justify-content: center;
   }
 
@@ -365,5 +369,9 @@ footer p {
 
   .redes-sociais {
     text-align: center;
+  }
+
+  .empresa {
+    max-width: 90%
   }
 }

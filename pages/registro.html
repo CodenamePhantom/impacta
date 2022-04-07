@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/menu-mobile.css">
+  <title>Registro</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <img src="../images/logo_transparent.png" alt="3Athletic">
+    </h1>
+
+    <input type="checkbox" id="control-nav">
+    <label for="control-nav" class="control-nav"></label>
+    <label for="control-nav" class="control-nav-close"></label>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html">home</a>
+        </li>
+        <li>
+          <a href="atividades.html">atividades</a>
+        </li>
+        <li>
+          <a href="#">contato</a>
+        </li>
+        <li>
+          <a class="active" href="#">registre-se</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2 id="titulo">Registro de Atletas</h2>
+
+  <form>
+    <div>
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome">
+    </div>
+
+    <div>
+      <label for="idade">Idade</label>
+      <input type="number" name="idade" id="idade">
+    </div>
+
+    <div>
+      <label for="modalidade">Modalidade</label>
+      <input type="text" name="modalidade" id="modalidade">
+    </div>
+
+    <div>
+      <label for="pontos">Pontos</label>
+      <input type="number" name="pontos" id="pontos">
+    </div>
+
+    <div>
+      <button class="saiba-mais" id="inserir">Inserir</button>
+      <button class="saiba-mais" id="listar">Listar</button>
+      <button class="saiba-mais" id="cadastrar">Cadastrar</button>
+    </div>
+  </form>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Modalidade</th>
+        <th>Pontos</th>
+      </tr>
+    </thead>
+
+    <tbody id="tabela-atletas">
+      <tr>
+        <td>Thiago</td>
+        <td>38</td>
+        <td>Corrida</td>
+        <td>77</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <footer>
+    <address class="">
+      Rua Amador Bueno, 100 <br>
+      Vila Industrial - Campinas <br>
+      CEP: 13035-030
+      Tel.: 19 1234-5678
+      <div id="clock">text</div>
+    </address>
+    <br>
+    <p> &copy; Alguns direitos reservados | &lt;Vitor Falchi&gt;</p>
+  </footer>
+
+  <script src="../script/adiciona-atleta.js"></script>
+  <script src="../script/clock.js" charset="utf-8"></script>
+</body>
+
+</html>
