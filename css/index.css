@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+@import url(
+  'https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rubik+Glitch&display=swap'
+);
+
+html {
+  font-family: 'Fjalla One', sans-serif;
+}
+
 img {
   max-width: 100%;
 }
@@ -306,6 +314,81 @@ footer p {
   cursor: pointer;
 }
 
+.error {
+  color: red;
+}
+
+
+
+.form-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+
+#titulo {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+
+
+#registro label,
+#registro input {
+  display: block;
+}
+
+#registro input {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  height: 1.9rem;
+  width: 40rem;
+}
+
+#registro input:focus{
+  background: rgb(223, 222, 222);
+}
+
+.tabela-container {
+  width: 80%;
+  margin: 5% auto;
+}
+
+table {
+  margin: 5% auto 0;
+  min-width: 100%;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: cornflowerblue;
+}
+
+th,
+td {
+  padding: 0.5rem 1rem;
+  width: 25%;
+}
+
+td {
+  border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+  background: lightcyan;
+}
+
+tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+
 /* Telas abaixo de 930px */
 @media screen and (max-width: 930px) {
   .atividades {
@@ -340,6 +423,10 @@ footer p {
     margin: auto;
     padding-top: 10%;
   }
+
+  #registro input {
+    width: 30rem;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -373,5 +460,9 @@ footer p {
 
   .empresa {
     max-width: 90%
+  }
+
+  #registro input {
+    width: 25rem;
   }
 }

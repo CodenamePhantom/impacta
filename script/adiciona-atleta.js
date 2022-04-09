@@ -37,8 +37,10 @@ botãoAdicionaAtleta.addEventListener('click', function(e){
 
     if(idade == '' || nome == '' || modalidade == '' || pontos == '') {
         formError("Os campos não podem estar vazios");
-    }else if (pontos > 100) {
+    }else if(pontos > 100) {
         formError("A pontuação não pode ser maior que 100.");
+    }else if(pontos < 0 || idade < 0) {
+        formError("Não é permitido números negativos.");
     }else {
         nomeTd.textContent = nome;
         idadeTd.textContent = idade;
