@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/menu-mobile.css">
   <title>Registro</title>
@@ -38,7 +39,69 @@
     </nav>
   </header>
 
-  <div class="form-container">
+  <section id="registro-container">
+    <h2 id="titulo">Tabela de Atletas</h2>
+
+    <article class="form-crud-container">
+      <form class="crud-form">
+        <div>
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome">
+        </div>
+
+        <div>
+          <label for="idade">Idade</label>
+          <input type="number" name="idade" id="idade">
+        </div>
+
+        <div>
+          <label for="modalidade">Modalidade</label>
+          <input type="text" name="modalidade" id="modalidade">
+        </div>
+
+        <div>
+          <label for="pontos">Pontos</label>
+          <input type="number" name="pontos" id="pontos">
+        </div>
+
+        <div>
+          <button type="submit" id="enviar">Enviar</button>
+          <input type="hidden" name="id">
+        </div>
+
+      </form>
+    </article>
+
+    <article class="table-crud-container">
+      <h2>Ver Nomes</h2>
+      <table class="crud-table">
+        <thead>
+          <tr>
+            <th>NOME</th>
+            <th>IDADE</th>
+            <th>MODALIDADE</th>
+            <th>PONTOS</th>
+            <th>OPÇÕES</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </article>
+    <template id="crud-template">
+      <tr>
+        <td class="nome"></td>
+        <td class="idade"></td>
+        <td class="modalidade"></td>
+        <td class="pontos"></td>
+        <td>
+          <button class="edit">Editar</button>
+          <button class="delete">Excluir</button>
+        </td>
+      </tr>
+    </template>
+  </section>
+
+  <!-- <div class="form-container">
     <h2 id="titulo">Registro de Atletas</h2>
 
     <form id="registro">
@@ -94,7 +157,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
+  </div> -->
 
 
 
@@ -110,7 +173,8 @@
     <p> &copy; Alguns direitos reservados | &lt;Vitor Falchi&gt;</p>
   </footer>
 
-  <script src="../script/adiciona-atleta.js"></script>
+  <!-- <script src="../script/adiciona-atleta.js"></script> -->
+  <script src="../script/crud.js" charset="utf-8"></script>
   <script src="../script/clock.js" charset="utf-8"></script>
 </body>
 
