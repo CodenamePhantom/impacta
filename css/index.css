@@ -320,7 +320,7 @@ footer p {
 
 
 
-.form-container {
+.form-crud-container {
   margin: 0 auto;
   width: 80%;
 }
@@ -334,24 +334,24 @@ footer p {
 
 
 
-#registro label,
-#registro input {
+#registro-container label,
+#registro-container input {
   display: block;
 }
 
-#registro input {
+#registro-container input {
   margin-bottom: 15px;
   border-radius: 5px;
   height: 1.9rem;
   width: 40rem;
 }
 
-#registro input:focus{
+#registro-container input:focus{
   background: rgb(223, 222, 222);
 }
 
-.tabela-container {
-  width: 80%;
+.table-crud-container {
+  width: 90%;
   margin: 5% auto;
 }
 
@@ -424,7 +424,7 @@ tr:nth-child(even) {
     padding-top: 10%;
   }
 
-  #registro input {
+  #registro-container input {
     width: 30rem;
   }
 }
@@ -462,7 +462,14 @@ tr:nth-child(even) {
     max-width: 90%
   }
 
-  #registro input {
+  #registro-container input {
     width: 25rem;
   }
+}
+
+/* registre-se */
+
+.form-button {
+  margin-top: 5px;
+  font-weight: bold;
 }

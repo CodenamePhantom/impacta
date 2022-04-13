@@ -1,3 +1,18 @@
 {
-    "atletas": []
+  "atletas": [
+    {
+      "nome": "Vitor Falchi",
+      "idade": 24,
+      "modalidade": "Alcolismo",
+      "pontos": 100,
+      "id": 1
+    },
+    {
+      "nome": "João das Neves",
+      "idade": "333",
+      "modalidade": "Dragões",
+      "pontos": "999",
+      "id": 2
+    }
+  ]
 }
