@@ -2,7 +2,7 @@ let d = document,
     $table = d.getElementById('crud-table'),
     $form = d.getElementById('crud-form'),
     $title = d.getElementById('crud-title')
-    $template = d.getElementById('crud-template').content,
+$template = d.getElementById('crud-template').content,
     $fragment = d.createDocumentFragment();
 
 const ajax = (options) => {
@@ -48,9 +48,10 @@ const getAll = () => {
                 $template.querySelector('.edit').dataset.pontos = el.pontos;
                 // para excluir
                 $template.querySelector('.delete').dataset.id = el.id;
+                $template.querySelector('.delete').dataset.nome = el.nome;
 
                 let $clone = d.importNode($template, true);
-                $fragment.appendChild($clone)
+                $fragment.appendChild($clone);
             });
             $table.querySelector('tbody').appendChild($fragment);
         },
@@ -62,13 +63,13 @@ const getAll = () => {
 
 d.addEventListener('DOMContentLoaded', getAll)
 
-//submit
+// Submit e Cancel
 d.addEventListener('submit', e => {
-    if(e.target === $form) {
+    if (e.target === $form) {
         e.preventDefault();
     }
 
-    if(!e.target.id.value) {
+    if (!e.target.id.value) {
         // método POST
         ajax({
             url: 'http://localhost:3000/atletas',
@@ -97,4 +98,35 @@ d.addEventListener('submit', e => {
             }
         });
     }
-})
+});
+d.addEventListener('reset', e => {
+    location.reload()
+});
+
+// Edit e Delete
+d.addEventListener('click', e => {
+    if (e.target.matches('.edit')) {
+        $title.textContent = 'Editar dados do atleta';
+        $form.nome.value = e.target.dataset.nome;
+        $form.idade.value = e.target.dataset.idade;
+        $form.modalidade.value = e.target.dataset.modalidade;
+        $form.pontos.value = e.target.dataset.pontos;
+        $form.id.value = e.target.dataset.id;
+        console.table(e.target.dataset);
+    }
+    if (e.target.matches('.delete')) {
+        let isDelete = confirm(`Deseja deletar o atleta ${e.target.dataset.nome}?`)
+
+        if (isDelete) {
+            ajax({
+                url: `http://localhost:3000/atletas/${e.target.dataset.id}`,
+                method: 'DELETE',
+                success: (res) => alert("Cadastro excluido com sucesso."),
+                error: (res) => {
+                    e.preventDefault();
+                    alert(err);
+                },
+            });
+        }
+    }
+});
