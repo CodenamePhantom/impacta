@@ -6,8 +6,7 @@
   padding: 0;
 }
 
-@import url(
-  'https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rubik+Glitch&display=swap'
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rubik+Glitch&display=swap'
 );
 
 html {
@@ -291,7 +290,7 @@ footer p {
   background-image: linear-gradient(to bottom,
       rgb(240, 227, 215),
       #444);
-      padding: 10%;
+  padding: 10%;
 }
 
 .filiacao div,
@@ -319,9 +318,10 @@ footer p {
 }
 
 
-
+#crud-title,
 .form-crud-container {
   margin: 0 auto;
+  padding-top: 2%;
   width: 80%;
 }
 
@@ -343,10 +343,10 @@ footer p {
   margin-bottom: 15px;
   border-radius: 5px;
   height: 1.9rem;
-  width: 40rem;
+  width: 80%;
 }
 
-#registro-container input:focus{
+#registro-container input:focus {
   background: rgb(223, 222, 222);
 }
 
@@ -423,10 +423,6 @@ tr:nth-child(even) {
     margin: auto;
     padding-top: 10%;
   }
-
-  #registro-container input {
-    width: 30rem;
-  }
 }
 
 @media screen and (max-width: 599px) {
@@ -460,10 +456,6 @@ tr:nth-child(even) {
 
   .empresa {
     max-width: 90%
-  }
-
-  #registro-container input {
-    width: 25rem;
   }
 }
 

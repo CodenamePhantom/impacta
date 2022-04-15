@@ -5,6 +5,14 @@ let d = document,
 $template = d.getElementById('crud-template').content,
     $fragment = d.createDocumentFragment();
 
+function formError(message) {
+    var spanError = document.createElement('span');
+    spanError.textContent = `${message}`;
+    spanError.classList.add('error');
+    var inError = document.getElementById('pontos');
+    inError.after(spanError);
+}
+
 const ajax = (options) => {
     let { url, method, success, error, data } = options;
 
@@ -65,41 +73,52 @@ d.addEventListener('DOMContentLoaded', getAll)
 
 // Submit e Cancel
 d.addEventListener('submit', e => {
-    if (e.target === $form) {
-        e.preventDefault();
+    if ($('.error') != null) {
+        $('.error').remove();
     }
-
-    if (!e.target.id.value) {
-        // método POST
-        ajax({
-            url: 'http://localhost:3000/atletas',
-            method: 'POST',
-            success: (res) => location.reload(),
-            error: (res) => console.log(err),
-            data: {
-                nome: e.target.nome.value,
-                idade: e.target.idade.value,
-                modalidade: e.target.modalidade.value,
-                pontos: e.target.pontos.value
-            }
-        });
+    if (e.target.idade.value > 100 || e.target.idade.value < 0) {
+        formError('A idade não pode ser maior ou menor que 100')
+        e.preventDefault();
+    } else if (e.target.pontos.value > 100 || e.target.pontos.value < 0) {
+        formError('A pontuação não pode ser maior ou menor que 100');
+        e.preventDefault();
     } else {
-        // update
-        ajax({
-            url: `http://localhost:3000/atletas/${e.target.id.value}`,
-            method: 'PUT',
-            success: (res) => location.reload(),
-            error: (res) => console.log(err),
-            data: {
-                nome: e.target.nome.value,
-                idade: e.target.idade.value,
-                modalidade: e.target.modalidade.value,
-                pontos: e.target.pontos.value
-            }
-        });
+        if (e.target === $form) {
+            e.preventDefault();
+        }
+
+        if (!e.target.id.value) {
+            // método POST
+            ajax({
+                url: 'http://localhost:3000/atletas',
+                method: 'POST',
+                success: (res) => location.reload(),
+                error: (res) => console.log(err),
+                data: {
+                    nome: e.target.nome.value,
+                    idade: e.target.idade.value,
+                    modalidade: e.target.modalidade.value,
+                    pontos: e.target.pontos.value
+                }
+            });
+        } else {
+            // update
+            ajax({
+                url: `http://localhost:3000/atletas/${e.target.id.value}`,
+                method: 'PUT',
+                success: (res) => location.reload(),
+                error: (res) => console.log(err),
+                data: {
+                    nome: e.target.nome.value,
+                    idade: e.target.idade.value,
+                    modalidade: e.target.modalidade.value,
+                    pontos: e.target.pontos.value
+                }
+            });
+        }
     }
 });
-d.addEventListener('reset', e => {
+d.addEventListener('reset', () => {
     location.reload()
 });
 

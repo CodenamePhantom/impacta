@@ -2,17 +2,31 @@
   "atletas": [
     {
       "nome": "Vitor Falchi",
-      "idade": 24,
-      "modalidade": "Alcolismo",
-      "pontos": 100,
+      "idade": "24",
+      "modalidade": "JavaScript",
+      "pontos": "9999",
       "id": 1
     },
     {
       "nome": "João das Neves",
-      "idade": "333",
-      "modalidade": "Dragões",
-      "pontos": "999",
+      "idade": "12",
+      "modalidade": "Fogo",
+      "pontos": "30",
       "id": 2
+    },
+    {
+      "nome": "Josiel Casawhite",
+      "idade": "35",
+      "modalidade": "HE HE",
+      "pontos": "120000",
+      "id": 3
+    },
+    {
+      "nome": "LeBron James",
+      "idade": "1134",
+      "modalidade": "Basket",
+      "pontos": "1",
+      "id": 4
     }
   ]
 }
